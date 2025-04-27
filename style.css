@@ -1,3 +1,102 @@
 * {
-    background-color: pink;
+    --blue-header: #4287f5;
+}
+
+body {
+    height: 100%;
+    width: auto;
+    margin: 0;
+    font-family: "Cal Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-header);
+    color: white;
+    height: 10vh;
+}
+
+.add-button {
+    background-color: white;
+    color: var(--blue-header);
+    margin-left: 10em;
+    height: 2.5em;
+    width: 5em;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+
+.library-content {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.modal {
+    display: flex;
+    border: 3px solid black;
+    border-radius: 20px;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    top: 25%;
+    left: 40%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal h2 {
+    color: var(--blue-header)
+}
+
+.modal label {
+    padding-right: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    margin: 10px;
+}
+
+.submit-button {
+    margin: auto 20px 5px 20px;
+    background-color: var(--blue-header);
+    color: white;
+    width: 5em;
+    height: 2em;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button {
+    margin: auto 20px 5px 20px;
+    width: 5em;
+    height: 2em;
+    color: var(--blue-header);
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-buttons>div:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
