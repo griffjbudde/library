@@ -20,7 +20,7 @@ header {
     height: 10vh;
 }
 
-.add-button {
+#add-button {
     background-color: white;
     color: var(--blue-header);
     margin-left: 10em;
@@ -33,7 +33,7 @@ header {
     align-items: center;
 }
 
-.add-button:hover {
+#add-button:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     cursor: pointer;
 }
@@ -41,13 +41,29 @@ header {
 .library-content {
     height: 90vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    margin: 15px;
+    gap: 15px;
+    justify-items: start;
+    flex-wrap: wrap;
 }
 
 .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-box {
     display: flex;
-    border: 3px solid black;
+    z-index: 1;
+    /* border: 2px solid black; */
     border-radius: 20px;
     position: fixed;
     height: 300px;
@@ -56,13 +72,14 @@ header {
     left: 40%;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
 
-.modal h2 {
+.modal-box h2 {
     color: var(--blue-header)
 }
 
-.modal label {
+.modal-box label {
     padding-right: 10px;
 }
 
@@ -99,4 +116,33 @@ header {
 .modal-buttons>div:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    color: var(--blue-header);
+}
+
+.delete-button {
+    width: 90%;
+    height: 1.5em; 
+    justify-self: center;
+    text-align: center;
+    border: 1px solid var(--blue-header);
+    border-radius: 15px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: #4287f5;
+    color: white;
+    font-weight: lighter;
 }
